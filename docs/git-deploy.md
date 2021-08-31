@@ -28,7 +28,7 @@ aviatur-project/
   |--development
   |  |--other-branches
   |
-  
+
 ```
 
 Open `docs/getting-started.md` and edit some lines. The site reloads automatically and display your changes.

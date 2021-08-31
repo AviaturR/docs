@@ -5,6 +5,7 @@ module.exports = {
       label: 'Docusaurus Tutorial',
       items: [
         'git-deploy',
+        'test-credit-cards',
         'getting-started',
         'create-a-page',
         'create-a-document',
