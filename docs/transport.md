@@ -111,6 +111,10 @@ Estructura de listado de autos:
 }
 ```
 
+captura de ejemplo de resultados
+
+![Example banner](../static/img/disponibilidad.png)
+
 Estructura de ejercicio de reservar
 
 ```shell
