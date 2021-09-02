@@ -3,15 +3,16 @@ title: Git deploy
 slug: /git-deploy
 ---
 
-## Paso 1: Requerimientos
+## Requisitos minimos:
 
 La versión minima de git en la que debe estar el servidor es `2.33.0`
+La versión del PHP por la `5.6.33`
 
 ```shell
 $ git --version
 ```
 
-## Step 2: Ramas
+## Estructura de ramas
 
 La estructura son
 
