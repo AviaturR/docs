@@ -4,9 +4,9 @@ module.exports = {
       type: 'category',
       label: 'Docusaurus Tutorial',
       items: [
+        'getting-started',
         'git-deploy',
         'test-credit-cards',
-        'getting-started',
         'create-a-page',
         'create-a-document',
         'create-a-blog-post',
@@ -14,5 +14,12 @@ module.exports = {
         'thank-you',
       ],
     },
+    {
+      type: 'category',
+      label: 'API Rest',
+      items: [
+        'white-mark-upload-logo',
+      ],
+    }
   ],
 };
