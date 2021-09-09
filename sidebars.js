@@ -4,14 +4,9 @@ module.exports = {
       type: 'category',
       label: 'Docusaurus Tutorial',
       items: [
-        'getting-started',
         'git-deploy',
         'test-credit-cards',
-        'create-a-page',
-        'create-a-document',
-        'create-a-blog-post',
-        'markdown-features',
-        'thank-you',
+        'xml-add-product-data',
       ],
     },
     {
@@ -19,6 +14,18 @@ module.exports = {
       label: 'API Rest',
       items: [
         'white-mark-upload-logo',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Default',
+      items: [
+        'create-a-page',
+        'create-a-document',
+        'create-a-blog-post',
+        'markdown-features',
+        'getting-started',
+        'thank-you',
       ],
     }
   ],
