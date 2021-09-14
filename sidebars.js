@@ -11,11 +11,19 @@ module.exports = {
     },
     {
       type: 'category',
+      label: 'Documentación proveedores',
+      items: [
+        'hopper-credentials',
+      ],
+    },
+    {
+      type: 'category',
       label: 'API Rest',
       items: [
         'white-mark-upload-logo',
       ],
     },
+    /*
     {
       type: 'category',
       label: 'Default',
@@ -27,6 +35,6 @@ module.exports = {
         'getting-started',
         'thank-you',
       ],
-    }
+    }*/
   ],
 };
