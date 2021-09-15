@@ -20,7 +20,8 @@ module.exports = {
         'hopper-flight-add-product-data-xml',
         'hopper-flight-update-payment-xml',
         'tripadvisor-credentials',
-        'kayak-documentation'
+        'kayak-documentation',
+        'placetopay-docs'
       ],
     },
     {
