@@ -1,6 +1,6 @@
 ---
 title: Tripadvisor credenciales
-slug: /tripadvisor-credentialas
+slug: /tripadvisor-credentials
 ---
 
 ## Introducción

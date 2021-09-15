@@ -1,0 +1,290 @@
+---
+title: Hopper flight add product data xml
+slug: /hopper-flight-add-product-data-xml
+---
+
+## Introducción
+
+xml de add product data del regreso oficial:
+
+```xml
+<soapenv:Envelope
+	xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+	xmlns:ns="http://www.aviatur.com/soa/formato/mbus/request/version/1.0">
+	<soapenv:Header/>
+	<soapenv:Body>
+		<ns:mbus>
+			<ns:request>
+				<ns:header>
+					<ns:service>CREA_SOLICITUD_PRODUCTO</ns:service>
+					<ns:invoker>BPM</ns:invoker>
+					<ns:provider>dummy|http://www.aviatur.com.co/dummy/</ns:provider>
+					<ns:requestId>-691267543</ns:requestId>
+				</ns:header>
+				<ns:body>
+					<FILTRO>
+						<data>
+							<operation_id>create</operation_id>
+							<ref_externa/>
+							<hoppertransaction>8BB26L2Q</hoppertransaction>
+							<transaction_id>eyJlIjoiMTYzMTY2NTgyN19hTUViIn0.y20bwoLcvO_KbJxJn-JssaB5IUn6kRBMRShcwicMH40</transaction_id>
+							<client>
+								<id>746590</id>
+								<name>Luis David</name>
+								<last_name>Huertas Redondo</last_name>
+							</client>
+							<connection_data>
+								<ip>127.0.0.1</ip>
+								<loc>{connection_data_loc}</loc>
+								<country>{connection_data_country}</country>
+								<city>{connection_data_city}</city>
+								<connection_info>{connection_data_info}</connection_info>
+							</connection_data>
+							<sale_freelance></sale_freelance>
+							<sale_operator>
+								<id/>
+								<name/>
+								<last_name/>
+							</sale_operator>
+							<sale_consultant>
+								<id/>
+								<name/>
+								<last_name/>
+							</sale_consultant>
+							<channel>
+								<id>B2C</id>
+								<name>B2C</name>
+							</channel>
+							<office>
+								<id>010-0501024</id>
+								<name>010-0501024</name>
+							</office>
+							<state>
+								<id>6</id>
+								<name>Reserva Realizada</name>
+								<notes/>
+								<sale_operator>
+									<id/>
+									<name/>
+									<last_name/>
+								</sale_operator>
+							</state>
+							<product>
+								<name>Tiquete Aereo</name>
+								<source_id>062JT7</source_id>
+								<bill_number>062JT7</bill_number>
+								<booking_id>062JT7</booking_id>
+								<booking_id2>062JT7</booking_id2>
+								<booking_date>2021-09-13 18:35</booking_date>
+								<booking_date2></booking_date2>
+								<duration_type>D</duration_type>
+								<begin_date>2022-02-17 12:55</begin_date>
+								<end_date>2022-02-17 14:02</end_date>
+								<stock>1</stock>
+								<deposit_allowed></deposit_allowed>
+								<maximum_payment_date></maximum_payment_date>
+								<minimun_value_cop>0</minimun_value_cop >
+								<minimun_value_quote>0</minimun_value_quote >
+								<product_type>
+									<id>1</id>
+									<name>Tiquete Aereo</name>
+								</product_type>
+								<state>
+									<id>6</id>
+									<name>Reserva Realizada</name>
+									<notes/>
+									<sale_operator>
+										<id/>
+										<name/>
+										<last_name/>
+									</sale_operator>
+								</state>
+								<provider>
+									<id>100</id>
+									<name>Galileo</name>
+								</provider>
+								<passenger_types>
+									<passenger_type>
+										<id>ADT</id>
+										<name>Adulto</name>
+										<fare>
+											<base_amount>82800</base_amount>
+											<administrative_amount>500</administrative_amount>
+											<qse_amount>0</qse_amount>
+											<taxes>
+												<tax>
+													<code>CO</code>
+													<name>CO</name>
+													<amount>16700</amount>
+												</tax>
+												<tax>
+													<code>YS</code>
+													<name>YS</name>
+													<amount>4140</amount>
+												</tax>
+											</taxes>
+										</fare>
+									</passenger_type>
+								</passenger_types>
+								<passengers_numbers>1</passengers_numbers>
+								<passengers>
+									<passenger>
+										<passenger_number>1</passenger_number>
+										<type>ADT</type>
+										<first_name>Luis David</first_name>
+										<second_name></second_name>
+										<first_last_name>Huertas Redondo</first_last_name>
+										<second_last_name></second_last_name>
+										<document_type>
+											<id>CC</id>
+											<name>Cédula de ciudadanía</name>
+										</document_type>
+										<document_number>1000941665</document_number>
+										<phone_number>3213213211</phone_number>
+										<mobile_phone_number>3213213211</mobile_phone_number>
+										<birth_date>2002-02-26</birth_date>
+										<nationality>CO</nationality>
+										<notes/>
+										<treatment/>
+										<gender_id>335</gender_id>
+										<redress_number/>
+										<email>luis.huertas@aviatur.com</email>
+										<address>tv 23</address>
+										<country_id>BOGOTA</country_id>
+										<city_id>CO</city_id>
+										<reference/>
+										<seats/>
+									</passenger>
+								</passengers>
+								<notes></notes>
+								<fare_currency>
+									<code>COP</code>
+									<name>Pesos colombianos</name>
+									<symbol>$</symbol>
+								</fare_currency>
+                                <exchange_rates>
+                                    <exchange_rate>
+                                       <code>USD</code>
+                                       <name>Dolar Estadounidense</name>
+                                       <symbol>USD</symbol>
+                                       <value>3836.85</value>
+                                    </exchange_rate>
+                                    <exchange_rate>
+                                       <code>EUR</code>
+                                       <name>Euro</name>
+                                       <symbol>$$$</symbol>
+                                       <value>4543.21</value>
+                                    </exchange_rate>
+                                 </exchange_rates>
+								<fare_data>
+									<fare>
+										<product_type>1</product_type>
+										<fare_type>2</fare_type>
+										<operator>
+											<code>1</code>
+											<name>Aviatur.travel</name>
+										</operator>
+										<provider>
+											<code>1</code>
+											<name>Aerolinea</name>
+										</provider>
+										<base_amount>82800</base_amount>
+										<total_amount>103640</total_amount>
+										<administrative_amount>500</administrative_amount>
+										<administrative_amount_base>476</administrative_amount_base>
+										<administrative_amount_tax>24</administrative_amount_tax>
+										<commission_amount>0</commission_amount>
+										<markup_type>1</markup_type>
+										<markup_amount>0</markup_amount>
+										<utility_amount>0</utility_amount>
+										<taxes>
+											<tax>
+												<code>CO</code>
+												<name>CO</name>
+												<amount>16700</amount>
+											</tax>
+											<tax>
+												<code>YS</code>
+												<name>YS</name>
+												<amount>4140</amount>
+											</tax>
+										</taxes>
+										<service_fares/>
+										<optional_fares/>
+										<grats_info>
+											<include>N</include>
+											<amount>0.00</amount>
+										</grats_info>
+									</fare>
+								</fare_data>
+								<cost_data>
+									<fare>
+										<product_type>1</product_type>
+										<fare_type>2</fare_type>
+										<operator>
+											<code>1</code>
+											<name>Aviatur.travel</name>
+										</operator>
+										<provider>
+											<code>1</code>
+											<name>Aerolinea</name>
+										</provider>
+										<base_amount>82800</base_amount>
+										<total_amount>103640</total_amount>
+										<administrative_amount>500</administrative_amount>
+										<administrative_amount_base>476</administrative_amount_base>
+										<administrative_amount_tax>24</administrative_amount_tax>
+										<commission_amount>0</commission_amount>
+										<markup_type>1</markup_type>
+										<markup_amount>0</markup_amount>
+										<utility_amount>0</utility_amount>
+										<taxes>
+											<tax>
+												<code>CO</code>
+												<name>CO</name>
+												<amount>16700</amount>
+											</tax>
+											<tax>
+												<code>YS</code>
+												<name>YS</name>
+												<amount>4140</amount>
+											</tax>
+										</taxes>
+										<service_fares/>
+										<optional_fares/>
+										<grats_info>
+											<include>N</include>
+											<amount>0.00</amount>
+										</grats_info>
+									</fare>
+								</cost_data>
+								<payment_currency>
+									<code>COP</code>
+									<name>Pesos Colombianos</name>
+									<symbol>COP</symbol>
+								</payment_currency>
+								<travel_agency>
+									<code>TAR</code>
+									<name>Tiquetes Aviatur</name>
+								</travel_agency>
+								<language>
+									<code>EN</code>
+									<name>Español</name>
+								</language>
+								<aerolinea>
+									<code>AV</code>
+									<name>AVIANCA</name>
+								</aerolinea>
+								<product_data/>
+								<booking_data>
+									<![CDATA[<booking_period></booking_period><contact><name></name><last_name></last_name><main_phone_number></main_phone_number><optional_phone_number></optional_phone_number></contact><validating_airline><code>AV</code><name>Avianca</name></validating_airline><office_id><booking_code>318N</booking_code><emission_code>318N</emission_code></office_id><itineraries><itinerary><segment_number>2</segment_number><flight_number>9253</flight_number><departure_datetime>2022-02-17 12:55</departure_datetime><departure_airport><code>BOG</code><name>El Dorado International</name></departure_airport><departure_city><code>BOG</code><name>Bogota</name></departure_city><departure_terminal>1</departure_terminal><arrival_datetime>2022-02-17 14:02</arrival_datetime><arrival_airport><code>CLO</code><name>Alfonso B Aragon Intl</name></arrival_airport><arrival_city><code>CLO</code><name>Cali</name></arrival_city><arrival_terminal>2</arrival_terminal><airline><code>AV</code><name>Avianca</name></airline><class_trip><code>S</code><name></name></class_trip><cabin><code>E</code><name>Derecha</name></cabin><flight_duration></flight_duration><connections/><aircraft_type><code></code><name></name></aircraft_type></itinerary></itineraries>]]>
+								</booking_data>
+							</product>
+						</data>
+					</FILTRO>
+				</ns:body>
+			</ns:request>
+		</ns:mbus>
+	</soapenv:Body>
+</soapenv:Envelope>
+```

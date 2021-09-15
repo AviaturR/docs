@@ -1,0 +1,251 @@
+---
+title: Hopper flight update payment xml
+slug: /hopper-flight-update-payment-xml
+---
+
+## Introducción
+
+xml de add product data oficial:
+
+```xml
+<soapenv:Envelope
+	xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+	xmlns:ns="http://www.aviatur.com/soa/formato/mbus/request/version/1.0">
+	<soapenv:Header/>
+	<soapenv:Body>
+		<ns:mbus>
+			<ns:request>
+				<ns:header>
+					<ns:service>REGISTRAR_PAGOSPRODSOLIC</ns:service>
+					<ns:invoker>BPM</ns:invoker>
+					<ns:provider>dummy|http://www.aviatur.com.co/dummy/</ns:provider>
+					<ns:requestId>1</ns:requestId>
+				</ns:header>
+				<ns:body>
+					<FILTRO>
+						<data>
+							<client_id>746590</client_id>
+							<order_id>15986146</order_id>
+							<operation_id>UPDATE</operation_id>
+							<products>
+								<product>
+									<id>34939158</id>
+									<source_id>062JT7</source_id>
+									<booking_id>062JT7</booking_id>
+									<booking_id2/>
+									<emission_data>
+										<reference/>
+										<date>2021-09-13 18:37</date>
+										<passengers>
+											<passenger>
+												<passenger_number>1</passenger_number>
+												<type>ADT</type>
+												<first_name>LUIS DAVID</first_name>
+												<second_name/>
+												<first_last_name>HUERTAS REDONDO</first_last_name>
+												<second_last_name/>
+												<ticket>
+													<prefijo_aerolinea>134</prefijo_aerolinea>
+													<numero_tiquete>9904218233</numero_tiquete>
+													<fecha_emision>2021-09-13 18:37</fecha_emision>
+													<indica_conjuncion/>
+													<rango_conjuncion/>
+													<iata_emision>76550762</iata_emision>
+												</ticket>
+											</passenger>
+										</passengers>
+									</emission_data>
+									<payment_currency>
+										<code>COP</code>
+									</payment_currency>
+									<payment_data>
+										<payment_type>
+											<id>50</id>
+											<name>Pago Combinado</name>
+											<id_kiosko/>
+										</payment_type>
+										<payments>
+											<payment>
+												<dispersion_type>PROPIO</dispersion_type>
+												<cardholder>PRUEBAS PRUEBAS PRUEBAS</cardholder>
+												<payment_gateway>AVIATUR</payment_gateway>
+												<reference_id>--</reference_id>
+												<card_number>1234</card_number>
+												<expired_year>2028</expired_year>
+												<expired_month>01</expired_month>
+												<approval_code>JMKR2PZ7</approval_code>
+												<approval_date>2022-01-21 00:00</approval_date>
+												<administrative_approval_code/>
+												<payment_id>2</payment_id>
+												<base_amount>0</base_amount>
+												<tax_amount>0</tax_amount>
+												<total_amount>25000</total_amount>
+												<administrative_base>0</administrative_base>
+												<administrative_tax>0</administrative_tax>
+												<administrative_amount>0</administrative_amount>
+												<notes/>
+												<extra1/>
+												<extra2/>
+												<ip_address>161.18.183.247</ip_address>
+												<ip_address_city_code>BOG</ip_address_city_code>
+												<payment_type>
+													<id>28</id>
+													<name>Hopper</name>
+												</payment_type>
+												<franchise>
+													<code>VS</code>
+													<name>Visa</name>
+												</franchise>
+												<bank>
+													<id>RM_MC</id>
+													<name>Banco Debito</name>
+												</bank>
+												<state>
+													<id>1</id>
+													<name>Aprobada</name>
+													<reason_code>123456</reason_code>
+													<reason_text/>
+												</state>
+												<card_class/>
+												<quantity_redemption>0</quantity_redemption>
+												<passengers_types_payments>
+													<passenger_type_payment>
+														<type>ADT</type>
+														<fare>4160</fare>
+														<fare_tax>4140</fare_tax>
+														<fare_other_tax>16700</fare_other_tax>
+														<fare_fee>0</fare_fee>
+														<fare_fee_tax>0</fare_fee_tax>
+													</passenger_type_payment>
+												</passengers_types_payments>
+											</payment>
+											<payment>
+												<dispersion_type>PROVEEDOR</dispersion_type>
+												<cardholder>Luis Huertas</cardholder>
+												<payment_gateway>placetopay</payment_gateway>
+												<reference_id>ON23512-PN29570</reference_id>
+												<card_number>4111111111111111</card_number>
+												<expired_year>2024</expired_year>
+												<expired_month>01</expired_month>
+												<approval_code>123456</approval_code>
+												<approval_date>2021-09-13 18:35</approval_date>
+												<administrative_approval_code/>
+												<payment_id>2</payment_id>
+												<base_amount>0</base_amount>
+												<tax_amount>0</tax_amount>
+												<total_amount>78640</total_amount>
+												<administrative_base>0</administrative_base>
+												<administrative_tax>0</administrative_tax>
+												<administrative_amount>0</administrative_amount>
+												<notes/>
+												<extra1/>
+												<extra2/>
+												<ip_address>127.0.0.1</ip_address>
+												<ip_address_city_code>BOG</ip_address_city_code>
+												<payment_type>
+													<id>1</id>
+													<name>Tarjeta de credito</name>
+												</payment_type>
+												<franchise>
+													<code>VS</code>
+													<name>Visa</name>
+												</franchise>
+												<bank>
+													<id>CR_VS</id>
+													<name>BANCO DE PRUEBAS</name>
+												</bank>
+												<state>
+													<id>1</id>
+													<name>Aprobada</name>
+													<reason_code>00</reason_code>
+													<reason_text/>
+												</state>
+												<admnistrative_state>
+													<id>1</id>
+													<name>Aprobada</name>
+													<reason_code>00</reason_code>
+													<reason_text></reason_text>
+												</admnistrative_state>
+												<passengers_types_payments>
+													<passenger_type_payment>
+														<type>ADT</type>
+														<fare>78640</fare>
+														<fare_tax>0</fare_tax>
+														<fare_other_tax>0</fare_other_tax>
+														<fare_fee>0</fare_fee>
+														<fare_fee_tax>0</fare_fee_tax>
+													</passenger_type_payment>
+												</passengers_types_payments>
+											</payment>
+											<payment>
+												<dispersion_type>PROPIO</dispersion_type>
+												<cardholder>Luis Huertas</cardholder>
+												<payment_gateway>placetopay</payment_gateway>
+												<reference_id>ON23513-PN29571</reference_id>
+												<card_number>5000000534503504</card_number>
+												<expired_year>2026</expired_year>
+												<expired_month>02</expired_month>
+												<approval_code>123456</approval_code>
+												<approval_date>2021-09-13 18:35</approval_date>
+												<administrative_approval_code/>
+												<payment_id>2</payment_id>
+												<base_amount>0</base_amount>
+												<tax_amount>0</tax_amount>
+												<total_amount>500</total_amount>
+												<administrative_base>0</administrative_base>
+												<administrative_tax>0</administrative_tax>
+												<administrative_amount>0</administrative_amount>
+												<notes/>
+												<extra1/>
+												<extra2/>
+												<ip_address>161.18.183.247</ip_address>
+												<ip_address_city_code>BOG</ip_address_city_code>
+												<payment_type>
+													<id>1</id>
+													<name>Tarjeta de credito</name>
+												</payment_type>
+												<franchise>
+													<code>MC</code>
+													<name>Mastercard</name>
+												</franchise>
+												<bank>
+													<id>RM_MC</id>
+													<name>Banco de Occidente S.A.</name>
+												</bank>
+												<state>
+													<id>1</id>
+													<name>Aprobada</name>
+													<reason_code>00</reason_code>
+													<reason_text/>
+												</state>
+												<card_class/>
+												<admnistrative_state>
+													<id>1</id>
+													<name>Aprobada</name>
+													<reason_code>00</reason_code>
+													<reason_text/>
+												</admnistrative_state>
+												<passengers_types_payments>
+													<passenger_type_payment>
+														<type>ADT</type>
+														<fare>0</fare>
+														<fare_tax>0</fare_tax>
+														<fare_other_tax>0</fare_other_tax>
+														<fare_fee>476</fare_fee>
+														<fare_fee_tax>24</fare_fee_tax>
+													</passenger_type_payment>
+												</passengers_types_payments>
+											</payment>
+										</payments>
+									</payment_data>
+								</product>
+							</products>
+						</data>
+					</FILTRO>
+				</ns:body>
+			</ns:request>
+		</ns:mbus>
+	</soapenv:Body>
+</soapenv:Envelope>
+
+```
