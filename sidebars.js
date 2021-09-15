@@ -4,6 +4,7 @@ module.exports = {
       type: 'category',
       label: 'Documentación general',
       items: [
+        'getting-started',
         'git-deploy',
         'test-credit-cards',
         'xml-add-product-data',
@@ -18,7 +19,8 @@ module.exports = {
         'hopper-freeze-update-payment-xml',
         'hopper-flight-add-product-data-xml',
         'hopper-flight-update-payment-xml',
-        'tripadvisor-credentials'
+        'tripadvisor-credentials',
+        'kayak-documentation'
       ],
     },
     {
