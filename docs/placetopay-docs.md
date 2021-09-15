@@ -1,5 +1,5 @@
 ---
-title: Tripadvisor credenciales
+title: Placetopay documentación
 slug: /placetopay-docs
 ---
 

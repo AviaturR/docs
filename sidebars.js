@@ -14,6 +14,7 @@ module.exports = {
       type: 'category',
       label: 'Documentación proveedores',
       items: [
+        'galileo-docs',
         'hopper-credentials',
         'hopper-freeze-add-product-data-xml',
         'hopper-freeze-update-payment-xml',
