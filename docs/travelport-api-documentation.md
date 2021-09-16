@@ -42,3 +42,19 @@ Envíe su solicitud los siguientes **endpoints**, según corresponda:
 - Pre-producción: https://oauth.pp.travelport.com/oauth/oauth20/token
 - Producción: https://oauth.travelport.com/oauth/oauth20/token
 
+### Generar Token Postman
+Los siguientes pasos detallan cómo ingresar sus credenciales y generar el token OAuth de la colección Travelport Postman Developer Toolkit en la página de [Descargas](https://support.travelport.com/webhelp/TripServices/Content/Downloads/Downloads.htm "Descargas").
+
+#### Ingresar Credemciales
+
+1. Abra la colección Postman y haga clic en la pestaña **Body** en la parte superior de la colección. Complete las siguientes credenciales:
+    - username
+    - password
+    - client_id
+    - client_secret
+
+![](https://support.travelport.com/webhelp/TripServices/Content/Resources/Images/oauth/pm_credentials.jpg)
+
+2. A continuación, abra el archivo de entorno: En la esquina superior derecha de la ventana de Postman, seleccione el archivo de entorno que corresponda a su colección y haga clic en el botón de vista rápida del entorno.
+
+![](https://support.travelport.com/webhelp/TripServices/Content/Resources/Images/oauth/pm_editenv.jpg)
