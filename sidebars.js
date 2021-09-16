@@ -28,6 +28,7 @@ module.exports = {
       label: 'API Rest',
       items: [
         'white-mark-upload-logo',
+        'travelport-api-documentation'
       ],
     },
     /*

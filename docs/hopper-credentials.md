@@ -13,13 +13,21 @@ En esta sección debe documentarse el api rest de hopper
 Aquí las credenciales
 
 ```
-
+client_id: "gSwu3M7cJqLGXmXbnVpGe707ewcReFz8"
+client_secret: "syDNQIgbpV66pjRbjzHIZRtaK59-BqDq9WJnthfNgec505426zakFcBBa9qzQAsN"
+audience: "https://staging.api.hopper.com"
+grant_type: "client_credentials"
 ```
 
-link de descarga de la colecioón de postman
+Endpoints Hopper
 
+__Autenticación__
 
-- `link`
+- `https://hopper-api.auth0.com/`
+
+__Servicios__
+
+- `https://staging.api.hopper.com/v0/`
 
 link de documentación hopper v0:
 
