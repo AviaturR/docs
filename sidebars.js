@@ -14,13 +14,15 @@ module.exports = {
       type: 'category',
       label: 'Documentación proveedores',
       items: [
+        'galileo-docs',
         'hopper-credentials',
         'hopper-freeze-add-product-data-xml',
         'hopper-freeze-update-payment-xml',
         'hopper-flight-add-product-data-xml',
         'hopper-flight-update-payment-xml',
         'tripadvisor-credentials',
-        'kayak-documentation'
+        'kayak-documentation',
+        'placetopay-docs'
       ],
     },
     {
