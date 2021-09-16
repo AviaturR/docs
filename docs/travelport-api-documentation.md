@@ -58,3 +58,11 @@ Los siguientes pasos detallan cómo ingresar sus credenciales y generar el token
 2. A continuación, abra el archivo de entorno: En la esquina superior derecha de la ventana de Postman, seleccione el archivo de entorno que corresponda a su colección y haga clic en el botón de vista rápida del entorno.
 
 ![](https://support.travelport.com/webhelp/TripServices/Content/Resources/Images/oauth/pm_editenv.jpg)
+
+3. En la sección **Globals**, coloque el cursor sobre el campo **Access Group** como se muestra a continuación y haga clic en el ícono de lápiz para abrir los campos y editarlos.
+
+![](https://support.travelport.com/webhelp/TripServices/Content/Resources/Images/oauth/pm_accessgroup.jpg)
+
+4. Ingrese el valor del grupo de acceso proporcionado en los campos **Initial Value** y **Current Value**.
+
+5. Haga clic en cualquier lugar fuera de la ventana del entorno para cerrarla y guardar sus cambios.
