@@ -66,3 +66,199 @@ Los siguientes pasos detallan cómo ingresar sus credenciales y generar el token
 4. Ingrese el valor del grupo de acceso proporcionado en los campos **Initial Value** y **Current Value**.
 
 5. Haga clic en cualquier lugar fuera de la ventana del entorno para cerrarla y guardar sus cambios.
+
+#### Enviar Token
+En cualquier colección de Travelport en Postman, siga los siguientes pasos detallados para ingresar sus credenciales y generar el token OAuth.
+
+1. Abra la colección Postman y expanda la carpeta etiquetada para OAuth como se muestra a continuación.
+
+![](https://support.travelport.com/webhelp/TripServices/Content/Resources/Images/oauth/pm_collection.jpg)
+
+2. Seleccione la transacción POST OAuth adecuada, si hay más de una, y haga clic en el botón **Send** para ejecutarla. El token de acceso consta de todo el texto entre las comillas después de **access_token**.
+
+![](https://support.travelport.com/webhelp/TripServices/Content/Resources/Images/oauth/pm_gentoken.jpg)
+
+3. Ahora puede ejecutar cualquier transacción en el kit de herramientas para desarrolladores.
+
+## Air APIS
+La colección Travelport JSON Air API es la conexión basada en API para contenido aéreo integral de múltiples fuentes que permite el rápido desarrollo de soluciones de viaje de alto rendimiento. Las API de Air facilitan el desarrollo multicanal en plataformas web y móviles. Al igual que con otras API JSON de Travelport, todas las solicitudes son RESTful y admiten JSON.
+
+Las API de Air han introducido soporte para contenido de nueva capacidad de distribución (NDC) además del contenido GDS estándar. Esta tecnología conecta a los agentes de viajes con el sistema de una aerolínea y brinda acceso a contenido diferenciado que a menudo solo está disponible a través de los canales directos de las aerolíneas. Las API de Travelport JSON han sido certificadas para contenido NDC con Qantas Airlines, United Airlines, American Airlines y Singapore Airlines. Obtenga más información sobre el contenido de [NDC y GDS](https://support.travelport.com/webhelp/TripServices/Content/Air/NDC.htm "NDC y GDS").
+
+### Air Workflow
+Las siguientes API de Air están actualmente en producción y respaldan el flujo de trabajo de Air completo desde la compra hasta la emisión de boletos de un PNR:
+
+Search        | Price         | Book         | Ticket
+------------- | ------------- | ------------ | ------------
+Busca la disponibilidad de los vuelos que necesites  | Confirme el precio de un itinerario específico con  | Reserve el itinerario aéreo | Consiga el Ticket de su reserva 
+
+
+### Air Endpoints
+Los Endpoint y las solicitudes HTTP disponibles para todas las API de Air se enumeran en la siguiente tabla. Cada solicitud HTTP va seguida de una ruta adicional para agregar al Endpoint, si es necesario, y un enlace a los detalles sobre el envío de esa solicitud.
+
+Los Endpoints de preproducción y producción se proporcionan a continuación en el modelo ODM 10v6, a menos que se indique lo contrario. Los Endpoint de producción solo se pueden usar una vez que esté aprovisionado.
+
+### Search One Way
+**Post**
+> /air/search/catalogofferings?view=detail
+
+**Headers**
+
+KEY                  | VALUE
+-------------------- | -------------
+Accept               | application/json
+Content-Type         | application/json 
+Accept-Version       | **{{version}}**
+Content-Version      | **{{version}}** 
+Authorization        | **{{token}}**
+XAUTH_TRAVELPORT_ACCESSGROUP  | **{{XAUTH_TRAVELPORT_ACCESSGROUP_1G}}**
+
+**Request**
+```javascript
+{
+   "CatalogOfferingsQueryRequest": {
+      "CatalogOfferingsRequest": [
+         {
+            "@type": "CatalogOfferingsRequestAir",
+            "contentSourceList": [
+               "GDS"
+            ],
+            "offersPerPage": 100,
+            "returnBrandedFaresInd": false,
+            "PassengerCriteria": [
+               {
+                  "number": 1,
+                  "age": 25,
+                  "passengerTypeCode": "ADT"
+               }
+            ],
+            "SearchCriteriaFlight": [
+               {
+                  "@type": "SearchCriteriaFlight",
+                  "departureDate": "{{InitialDeparture}}",
+                  "From": {
+                     "value": "LGA"
+                  },
+                  "To": {
+                     "value": "ORD"
+                  }
+               }
+            ],
+            "SearchModifiersAir": {
+               "excludeGround": "Train"
+            }
+         }
+      ]
+   }
+}
+```
+
+**Response**
+```javascript
+{
+    "CatalogOfferingsResponse": {
+        "CatalogOfferings": {
+            "@type": "CatalogOfferings",
+            "Identifier": {
+                "value": "16d41878-4912-442c-83c9-7c240a92f581"
+            },
+            "DefaultCurrency": {
+                "code": "AUD"
+            },
+            "CatalogOffering": [
+                {
+                    "@type": "CatalogOffering",
+                    "id": "o0.0",
+                    "ProductOptions": [...],
+                    "Price": {...},
+                    "TermsAndConditions": {...}
+                },
+                ...
+            ]
+        },
+        "ReferenceList": [
+            ...
+        ]
+    }
+}
+```
+
+### Search Round Trip
+**Post**
+> /air/search/catalogofferings?view=detail
+
+**Headers**
+
+KEY                  | VALUE
+-------------------- | -------------
+Accept               | application/json
+Content-Type         | application/json 
+Accept-Version       | **{{version}}**
+Content-Version      | **{{version}}** 
+Authorization        | **{{token}}**
+XAUTH_TRAVELPORT_ACCESSGROUP  | **{{XAUTH_TRAVELPORT_ACCESSGROUP_1G}}**
+
+**Request**
+```javascript
+{
+  "CatalogOfferingsQueryRequest" : {
+    "CatalogOfferingsRequest" : [ {
+      "@type" : "CatalogOfferingsRequestAir",
+      "maxNumberOfOffersToReturn" : 9999,
+      "offersPerPage" : 200,
+      "returnBrandedFaresInd" : true,
+      "PassengerCriteria" : [ {
+        "number" : 1,
+        "passengerTypeCode" : "ADT"
+      } ],
+      "SearchCriteriaFlight" : [ {
+        "departureDate" : "{{GDSInitialDepartureDt}}",
+        "From" : {
+          "value" : "CCU"
+        },
+        "To" : {
+          "value" : "PNQ"
+        }
+      }, {
+        "departureDate" : "{{SixDaysTrip}}",
+        "From" : {
+          "value" : "PNQ"
+        },
+        "To" : {
+          "value" : "CCU"
+        }
+      } ]
+    } ]
+  }
+}
+```
+
+**Response**
+```javascript
+{
+    "CatalogOfferingsResponse": {
+        "CatalogOfferings": {
+            "@type": "CatalogOfferings",
+            "Identifier": {
+                "value": "16d41878-4912-442c-83c9-7c240a92f581"
+            },
+            "DefaultCurrency": {
+                "code": "AUD"
+            },
+            "CatalogOffering": [
+                {
+                    "@type": "CatalogOffering",
+                    "id": "o0.0",
+                    "ProductOptions": [...],
+                    "Price": {...},
+                    "TermsAndConditions": {...}
+                },
+                ...
+            ]
+        },
+        "ReferenceList": [
+            ...
+        ]
+    }
+}
+```
